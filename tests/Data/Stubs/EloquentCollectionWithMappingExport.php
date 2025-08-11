@@ -26,14 +26,15 @@ class EloquentCollectionWithMappingExport implements FromCollection, WithMapping
     }
 
     /**
-     * @param  User  $user
+     * @param  User $row
+     *
      * @return array
      */
-    public function map($user): array
+    public function map($row): array
     {
         return [
-            $user->firstname,
-            $user->lastname,
+            $row->firstname,
+            $row->lastname,
         ];
     }
 }
